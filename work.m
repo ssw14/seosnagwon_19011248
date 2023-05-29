@@ -13,9 +13,15 @@ true_anomaly=input('enter=')
     function k= work3(mu,semimajor_axis)
         k=sqrt(mu/semimajor_axis);
     end
+k=work3(mu,semimajor_axis);
+r=work2(semimajor_axis, eccentricity, true_anomaly);
+
 
 velocityInPQW = k*[-sin(true_anomaly); eccentricity+cos(true_anomaly); 0];
+
 rangeInPQW=[r*cos(true_anomaly); r*sin(true_anomaly); 0];
+
 end
+
 
  
